@@ -85,7 +85,7 @@ def plot_confusion_matrix(y_true, y_pred, class_names):
     plt.show()
 
 # Configuração do diretório e tamanhos
-data_dir = r"Facial-Recog\assets"
+data_dir = r"Parte-2\RecFac"
 img_size = (50, 50)
 
 # Carregar e processar as imagens
@@ -112,8 +112,16 @@ train_accuracy, train_sensitivity, train_specificity = evaluate_model(y_true_tra
 test_accuracy, test_sensitivity, test_specificity = evaluate_model(y_true_test, y_pred_test)
 
 # Exibir resultados
-print(f"Treino - Acurácia: {train_accuracy}, Sensibilidade: {train_sensitivity}, Especificidade: {train_specificity}")
-print(f"Teste - Acurácia: {test_accuracy}, Sensibilidade: {test_sensitivity}, Especificidade: {test_specificity}")
+print(
+f'''Treino 
+    Acurácia: {train_accuracy}, 
+    Sensibilidade: {train_sensitivity}, 
+    Especificidade: {train_specificity}''')
+print(
+f'''Teste 
+    Acurácia: {test_accuracy}, 
+    Sensibilidade: {test_sensitivity}, 
+    Especificidade: {test_specificity}''')
 
 # Visualizar matriz de confusão
 class_names = sorted(os.listdir(data_dir))
